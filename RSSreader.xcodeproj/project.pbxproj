@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		703D7D0D29E803C70020360D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D0C29E803C70020360D /* AppDelegate.swift */; };
 		703D7D0F29E803C70020360D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D0E29E803C70020360D /* SceneDelegate.swift */; };
-		703D7D1129E803C70020360D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D1029E803C70020360D /* ViewController.swift */; };
-		703D7D1429E803C70020360D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703D7D1229E803C70020360D /* Main.storyboard */; };
+		703D7D1129E803C70020360D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D1029E803C70020360D /* FeedController.swift */; };
 		703D7D1729E803C70020360D /* RSSreader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D1529E803C70020360D /* RSSreader.xcdatamodeld */; };
 		703D7D1929E803CC0020360D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 703D7D1829E803CC0020360D /* Assets.xcassets */; };
 		703D7D1C29E803CC0020360D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703D7D1A29E803CC0020360D /* LaunchScreen.storyboard */; };
+		703D7D2429E80CE90020360D /* XmlParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D2329E80CE90020360D /* XmlParserManager.swift */; };
+		703D7D2A29E81CD00020360D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D2929E81CD00020360D /* FeedCell.swift */; };
+		703D7D3229E827860020360D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D3129E827860020360D /* UIView+Extensions.swift */; };
+		703D7D3929E853860020360D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D3829E853860020360D /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		703D7D0929E803C70020360D /* RSSreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		703D7D0C29E803C70020360D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		703D7D0E29E803C70020360D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		703D7D1029E803C70020360D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		703D7D1329E803C70020360D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		703D7D1029E803C70020360D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		703D7D1629E803C70020360D /* RSSreader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSreader.xcdatamodel; sourceTree = "<group>"; };
 		703D7D1829E803CC0020360D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		703D7D1B29E803CC0020360D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		703D7D1D29E803CC0020360D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		703D7D2329E80CE90020360D /* XmlParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlParserManager.swift; sourceTree = "<group>"; };
+		703D7D2929E81CD00020360D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		703D7D3129E827860020360D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		703D7D3829E853860020360D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,59 @@
 		703D7D0B29E803C70020360D /* RSSreader */ = {
 			isa = PBXGroup;
 			children = (
+				703D7D3029E827440020360D /* Files */,
+				703D7D2E29E827380020360D /* Utils */,
+				703D7D3329E8279F0020360D /* Model */,
+				703D7D3429E827A40020360D /* View */,
+				703D7D3629E827B50020360D /* Controller */,
+			);
+			path = RSSreader;
+			sourceTree = "<group>";
+		};
+		703D7D2E29E827380020360D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				703D7D2329E80CE90020360D /* XmlParserManager.swift */,
+				703D7D3129E827860020360D /* UIView+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		703D7D3029E827440020360D /* Files */ = {
+			isa = PBXGroup;
+			children = (
 				703D7D0C29E803C70020360D /* AppDelegate.swift */,
 				703D7D0E29E803C70020360D /* SceneDelegate.swift */,
-				703D7D1029E803C70020360D /* ViewController.swift */,
-				703D7D1229E803C70020360D /* Main.storyboard */,
-				703D7D1829E803CC0020360D /* Assets.xcassets */,
 				703D7D1A29E803CC0020360D /* LaunchScreen.storyboard */,
+				703D7D1829E803CC0020360D /* Assets.xcassets */,
 				703D7D1D29E803CC0020360D /* Info.plist */,
 				703D7D1529E803C70020360D /* RSSreader.xcdatamodeld */,
 			);
-			path = RSSreader;
+			name = Files;
+			sourceTree = "<group>";
+		};
+		703D7D3329E8279F0020360D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				703D7D3829E853860020360D /* Feed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		703D7D3429E827A40020360D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				703D7D2929E81CD00020360D /* FeedCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		703D7D3629E827B50020360D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				703D7D1029E803C70020360D /* FeedController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +135,8 @@
 			dependencies = (
 			);
 			name = RSSreader;
+			packageProductDependencies = (
+			);
 			productName = RSSreader;
 			productReference = 703D7D0929E803C70020360D /* RSSreader.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +165,8 @@
 				Base,
 			);
 			mainGroup = 703D7D0029E803C70020360D;
+			packageReferences = (
+			);
 			productRefGroup = 703D7D0A29E803C70020360D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,7 +183,6 @@
 			files = (
 				703D7D1C29E803CC0020360D /* LaunchScreen.storyboard in Resources */,
 				703D7D1929E803CC0020360D /* Assets.xcassets in Resources */,
-				703D7D1429E803C70020360D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +193,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				703D7D1129E803C70020360D /* ViewController.swift in Sources */,
+				703D7D1129E803C70020360D /* FeedController.swift in Sources */,
+				703D7D3929E853860020360D /* Feed.swift in Sources */,
 				703D7D1729E803C70020360D /* RSSreader.xcdatamodeld in Sources */,
 				703D7D0D29E803C70020360D /* AppDelegate.swift in Sources */,
 				703D7D0F29E803C70020360D /* SceneDelegate.swift in Sources */,
+				703D7D2A29E81CD00020360D /* FeedCell.swift in Sources */,
+				703D7D3229E827860020360D /* UIView+Extensions.swift in Sources */,
+				703D7D2429E80CE90020360D /* XmlParserManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		703D7D1229E803C70020360D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				703D7D1329E803C70020360D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		703D7D1A29E803CC0020360D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -220,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -296,9 +344,9 @@
 				INFOPLIST_FILE = RSSreader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,9 +372,9 @@
 				INFOPLIST_FILE = RSSreader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
