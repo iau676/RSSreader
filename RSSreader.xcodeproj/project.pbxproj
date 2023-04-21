@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		703D7D0D29E803C70020360D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D0C29E803C70020360D /* AppDelegate.swift */; };
-		703D7D0F29E803C70020360D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D0E29E803C70020360D /* SceneDelegate.swift */; };
 		703D7D1129E803C70020360D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D1029E803C70020360D /* FeedController.swift */; };
-		703D7D1729E803C70020360D /* RSSreader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D1529E803C70020360D /* RSSreader.xcdatamodeld */; };
 		703D7D1929E803CC0020360D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 703D7D1829E803CC0020360D /* Assets.xcassets */; };
 		703D7D1C29E803CC0020360D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703D7D1A29E803CC0020360D /* LaunchScreen.storyboard */; };
 		703D7D2429E80CE90020360D /* XmlParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D7D2329E80CE90020360D /* XmlParserManager.swift */; };
@@ -22,9 +20,7 @@
 /* Begin PBXFileReference section */
 		703D7D0929E803C70020360D /* RSSreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		703D7D0C29E803C70020360D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		703D7D0E29E803C70020360D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		703D7D1029E803C70020360D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
-		703D7D1629E803C70020360D /* RSSreader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSreader.xcdatamodel; sourceTree = "<group>"; };
 		703D7D1829E803CC0020360D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		703D7D1B29E803CC0020360D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		703D7D1D29E803CC0020360D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,11 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				703D7D0C29E803C70020360D /* AppDelegate.swift */,
-				703D7D0E29E803C70020360D /* SceneDelegate.swift */,
 				703D7D1A29E803CC0020360D /* LaunchScreen.storyboard */,
 				703D7D1829E803CC0020360D /* Assets.xcassets */,
 				703D7D1D29E803CC0020360D /* Info.plist */,
-				703D7D1529E803C70020360D /* RSSreader.xcdatamodeld */,
 			);
 			name = Files;
 			sourceTree = "<group>";
@@ -195,9 +189,7 @@
 			files = (
 				703D7D1129E803C70020360D /* FeedController.swift in Sources */,
 				703D7D3929E853860020360D /* Feed.swift in Sources */,
-				703D7D1729E803C70020360D /* RSSreader.xcdatamodeld in Sources */,
 				703D7D0D29E803C70020360D /* AppDelegate.swift in Sources */,
-				703D7D0F29E803C70020360D /* SceneDelegate.swift in Sources */,
 				703D7D2A29E81CD00020360D /* FeedCell.swift in Sources */,
 				703D7D3229E827860020360D /* UIView+Extensions.swift in Sources */,
 				703D7D2429E80CE90020360D /* XmlParserManager.swift in Sources */,
@@ -410,19 +402,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		703D7D1529E803C70020360D /* RSSreader.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				703D7D1629E803C70020360D /* RSSreader.xcdatamodel */,
-			);
-			currentVersion = 703D7D1629E803C70020360D /* RSSreader.xcdatamodel */;
-			path = RSSreader.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 703D7D0129E803C70020360D /* Project object */;
 }

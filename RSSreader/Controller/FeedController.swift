@@ -16,12 +16,7 @@ final class FeedController: UIViewController {
     
     private let tableView = UITableView()
     private let refresher = UIRefreshControl()
-
-    private var feedArray: [Feed] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    private var feedArray: [Feed] = [] { didSet { tableView.reloadData() } }
     
     //MARK: - Lifecycle
 
@@ -79,12 +74,12 @@ final class FeedController: UIViewController {
         }
     }
     
-    private func size(forWidth width: CGFloat, forText text: String?) -> CGSize {
+    private func size(forText text: String?) -> CGSize {
         let label = UILabel()
         label.numberOfLines = 0
         label.text = text
         label.lineBreakMode = .byWordWrapping
-        label.setWidth(width)
+        label.setWidth(view.frame.width)
         return label.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
     }
 }
@@ -98,17 +93,13 @@ extension FeedController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
-        
-        cell.titleLabel.text = feedArray[indexPath.row].title
-        cell.dateLabel.text = feedArray[indexPath.row].pubDate
-        
+        cell.feed = feedArray[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let text = feedArray[indexPath.row].title
-        let width = view.frame.width
-        let sizeHeight = size(forWidth: width, forText: text).height
+        let sizeHeight = size(forText: text).height
         return sizeHeight+32
     }
 }

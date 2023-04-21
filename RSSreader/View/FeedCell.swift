@@ -9,14 +9,16 @@ import UIKit
 
 final class FeedCell: UITableViewCell {
     
-    let dateLabel: UILabel = {
+    var feed: Feed? { didSet { configure() } }
+    
+    private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
         return label
     }()
     
-    let titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.numberOfLines = 3
@@ -41,5 +43,11 @@ final class FeedCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
+    private func configure() {
+        guard let feed = feed else { return }
+        
+        titleLabel.text = feed.title
+        dateLabel.text = feed.pubDate
+    }
 }
